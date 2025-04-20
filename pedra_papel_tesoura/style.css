@@ -16,9 +16,10 @@ body{
 
 #div-game{
     width: 45vw;
-    height: 75vh;
+    height: 80vh;
+    padding: 4rem 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     border-radius: 2rem;
@@ -26,8 +27,27 @@ body{
     background-color: #FFEDFA;
 }
 
+#div-texts{
+    width: 92%;
+    display: flex;
+    flex-direction: row;
+}
+
+#div-streaks{
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: clamp(0.6rem, 2vw, 1.2rem);
+}
+
 #span-title{
+    width: 25%;
+    text-align: center;
     font-size: clamp(1rem, 2.5vw, 3rem);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #div-results{
@@ -47,7 +67,7 @@ body{
 }
 
 #computer-result{
-    transform: scale(-1, 1);
+    transform: scale(-1, 1) rotate(30deg);
 }
 
 .result{
@@ -60,6 +80,7 @@ body{
     border: solid 0.2rem gray;
     border-radius: 50%;
     box-shadow: 0 0 2rem 0.3rem black;
+    transform: rotate(30deg);
 }
 
 .choice{
@@ -79,11 +100,37 @@ body{
     animation: selecting 0.3s ease-in infinite alternate;
 }
 
+.playing-player{
+    animation: rockPaperScissorsPlayer 0.2s ease-out infinite alternate;
+}
+
+.playing-computer{
+    animation: rockPaperScissorsComputer 0.2s ease-out infinite alternate;
+}
+
 @keyframes selecting{
     from{
         transform: translateY(0);
     }
     to{
         transform: translateY(-0.4rem);
+    }
+}
+
+@keyframes rockPaperScissorsPlayer{
+    0%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rockPaperScissorsComputer{
+    0%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-90deg);
     }
 }
