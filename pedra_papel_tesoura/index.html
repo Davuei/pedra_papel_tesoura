@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Pedra papel ou tesoura</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+    <script src="music.js" defer></script>
+    <script src="modal.js" defer></script>
+</head>
+<body>
+    <div id="btn-player">
+        <img src="./images/sound.png" alt="Mutas música">
+    </div>
+    <audio loop id="music-player" src="./songs/Cartoon, Daniel Levi, Jéja - On & On (feat. Daniel Levi) [NCS Release].mp3"></audio>
+
+    <div id="div-game">
+        <div id="div-texts">
+            <div id="div-streaks">
+                <p>Sequência: <span id="winning-streak">0</span></p>
+                <p>Melhor: <span id="best-streak">0</span></p>
+            </div>
+            <span id="span-title">Tente a sorte!</span>
+            <div id="open-info-modal">
+                <p>?</p>
+            </div>
+        </div>
+
+        <div id="div-results">
+            <span id="player-result" class="result">👌</span>
+            <span id="computer-result" class="result">👌</span>
+        </div>
+
+        <div id="div-choices">
+            <span class="choice" data-gesture="1">✊</span>
+            <span class="choice" data-gesture="2">🖐</span>
+            <span class="choice" data-gesture="3">✌</span>
+        </div>
+    </div>
+
+    <div id="modal">
+        <div id="div-modal">
+            <div id="header-modal">
+                <span id="close">&times;</span>
+                <h2 class="modal-title">Créditos</h2>
+            </div>
+            <div>
+                <h3>On & On</h3>
+                <pre>
+                    Song: Cartoon, Jéja - On & On (feat. Daniel Levi) [NCS Release]
+                    Music provided by NoCopyrightSounds
+                    Free Download/Stream: http://ncs.io/onandon
+                    Watch: http://youtu.be/K4DyBUG242c
+                </pre>
+            </div>
+            
+            <div>
+                <h3>Shine</h3>
+                <pre>
+                    Song: Spektrem - Shine [NCS Release]
+                    Music provided by NoCopyrightSounds
+                    Free Download/Stream: http://ncs.io/shine
+                    Watch: http://youtu.be/n4tK7LYFxI0
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
