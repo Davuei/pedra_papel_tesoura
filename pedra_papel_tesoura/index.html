@@ -5,18 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 
-    <script src="script.js" defer></script>
-    <script src="music.js" defer></script>
-    <script src="modal.js" defer></script>
+    <script src="./scripts/game.js" defer></script>
+    <script src="./scripts/music.js" defer></script>
+    <script src="./scripts/modal.js" defer></script>
 </head>
 <body>
-    <div id="btn-player">
-        <img src="./images/sound.png" alt="Mutas música">
-    </div>
-    <audio loop id="music-player" src="./songs/Cartoon, Daniel Levi, Jéja - On & On (feat. Daniel Levi) [NCS Release].mp3"></audio>
-
     <div id="div-game">
         <div id="div-texts">
             <div id="div-streaks">
@@ -41,13 +36,37 @@
         </div>
     </div>
 
+    <div id="music-player">
+        <audio id="audio-tag" src="./songs/Spektrem - Shine [NCS Release].mp3"></audio>
+
+        <div id="div-btn-player">
+            <img src="./images/sound.png" alt="Mutas música" id="btn-player">
+        </div>
+
+        <div id="div-song-track">
+            <input type="range" id="song-track" value="0">
+        </div>
+
+        <div id="div-volume">
+            <input type="range" id="volume">
+        </div>
+
+        <div id="song-time-info">
+            <p><span id="song-played">0:00</span> / <span id="song-duration">0:00</span></p>
+        </div>
+
+        <div id="div-loop-song">
+            <span id="loop-song">Loop</span>
+        </div>
+    </div>
+
     <div id="modal">
         <div id="div-modal">
             <div id="header-modal">
                 <span id="close">&times;</span>
                 <h2 class="modal-title">Créditos</h2>
             </div>
-            <div>
+            <div id="modal-content">
                 <h3>On & On</h3>
                 <pre>
                     Song: Cartoon, Jéja - On & On (feat. Daniel Levi) [NCS Release]

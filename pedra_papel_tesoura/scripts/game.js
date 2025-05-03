@@ -128,12 +128,12 @@ choices.forEach(c => {
 })
 
 //Função para carregar algumas configurações iniciais do jogo
-function initialConfig(){
+function gameInitialConfig(){
     bestStreak.innerText = localStorage.getItem("bestWinningStreak"); // Carrega a melhor sequência de vitórias do localStorage
 }
 
 //Chama a função para carregar as configurações iniciais
-initialConfig();
+gameInitialConfig();
 
 /*
     winning streak
